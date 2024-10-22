@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f7d1e6 0%, #c1d9f7 100%);
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Welcome Section */
+.welcome h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #4a4e69;
+    margin-bottom: 10px;
+}
+
+.welcome .name {
+    font-size: 2em;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #4a4e69;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Slideshow Section */
+.slideshow {
+    position: relative;
+    margin: 40px auto;
+}
+
+.slide-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.slideshow img {
+    min-width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    scroll-snap-align: center;
+}
+
+/* Interactive Section */
+.interactive {
+    margin-top: 30px;
+}
+
+.gift-box {
+    font-size: 2.5em;
+    cursor: pointer;
+    background: radial-gradient(circle, #ff6f61, #f7d1e6);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+}
+
+.gift-box:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    animation: fadeInMessage 2s ease forwards;
+    display: none;
+    color: #4a4e69;
+    font-weight: 600;
+}
+
+/* Closing Section */
+.closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #4a4e69;
+    animation: typing 4s steps(40, end);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #ff6f61;
+}
+
+.closing p {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #333;
+    animation: fadeIn 3s ease-in-out 1s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInMessage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: 2em;
+    }
+
+    .welcome .name {
+        font-size: 1.8em;
+    }
+
+    .welcome p {
+        font-size: 1em;
+    }
+
+    .slideshow img {
+        max-width: 90%;
+    }
+
+    .gift-box {
+        font-size: 2em;
+    }
+
+    .closing h2 {
+        font-size: 1.8em;
+    }
+
+    .closing p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome h1 {
+        font-size: 1.8em;
+    }
+
+    .welcome .name {
+        font-size: 1.5em;
+    }
+
+    .welcome p {
+        font-size: 0.9em;
+    }
+
+    .slideshow img {
+        max-width: 100%;
+    }
+
+    .gift-box {
+        font-size: 1.5em;
+    }
+
+    .closing h2 {
+        font-size: 1.5em;
+    }
+
+    .closing p {
+        font-size: 0.9em;
+    }
+}
